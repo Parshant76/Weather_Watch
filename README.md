@@ -1,41 +1,45 @@
-# Simple Weather CLI
+# Weather Watch 🌤️
 
-A beginner-friendly Command Line Interface (CLI) application that uses Python to fetch and display the current weather for any city.
+![Weather Watch Screenshot](screenshot.png)
 
-## API Used
-OpenWeatherMap API
+I built this simple tool because I wanted a quick way to check the weather right from my terminal without opening a browser. It connects to the OpenWeatherMap API to get real-time data.
 
-## How to Get API Key
-1. Go to the OpenWeatherMap website and sign up for a free account.
-2. Navigate to the "API keys" tab in your account dashboard.
-3. Generate a new API key and copy it.
+Just run the script, type in a city, and it tells you the temperature and conditions (so you know if you need a jacket!).
 
-## How to Install Dependencies
-1. Open your terminal or command prompt.
-2. Navigate to the project directory.
-3. Run the following command:
-   ```bash
-   pip install -r requirements.txt
-   ```
+## How It Works
+It's a straightforward Python script. I used the `requests` library to send a message to OpenWeatherMap's servers, which send back the weather data in JSON format. My code then parses that data and prints out the important parts nicely.
 
-## How to Run the Project
-1. Open `config.py` and replace `YOUR_API_KEY_HERE` with your actual API key.
-2. Run the application using the command:
-   ```bash
-   python main.py
-   ```
-3. Enter a city name when prompted.
+## Setup
+1.  **Get an API Key**: You'll need a free key from [OpenWeatherMap](https://openweathermap.org/).
+2.  **Clone the Repo**:
+    ```bash
+    git clone https://github.com/Parshant76/Weather_Watch.git
+    cd Weather_Watch
+    ```
+3.  **Install Requirements**:
+    ```bash
+    pip install -r requirements.txt
+    ```
+4.  **Config**: Open `config.py` and paste your API key there.
 
-## Sample Output
+## Running It
+```bash
+python main.py
+```
+Then just follow the prompts!
+
+## Example Output
 ```text
-Welcome to the Simple Weather App!
-Enter city name: London
+🌤️  Welcome to Weather Watch!
+Type the city name to get the weather.
 
+> Enter city name: London
+
+🌍 Weather Report for London
 ==============================
-Weather in London:
-Temperature: 15.32°C
-Humidity: 72%
-Description: Scattered clouds
+🌡️  Temperature: 15.32°C
+💧 Humidity:    72%
+☁️  Condition:   Scattered clouds
 ==============================
 ```
 
