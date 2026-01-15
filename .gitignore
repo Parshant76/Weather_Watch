@@ -1,0 +1,10 @@
+# Security: Do not upload API keys
+config.py
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# OS specific
+.DS_Store
+Thumbs.db
